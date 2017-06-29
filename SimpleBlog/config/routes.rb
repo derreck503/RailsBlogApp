@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about', as: 'about'
   
   # Generate all routes for controller. Run 'rake routes' to view routes
-  resources :posts
+  resources :posts do 
+    resources :comments
+    end
 
 
 end
