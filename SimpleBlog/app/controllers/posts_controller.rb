@@ -40,6 +40,11 @@ class PostsController < ApplicationController
         end
     end
     
+    def destroy 
+        @post = Post.find(params[:id])
+        @post.destroy
+        redirect_to posts_path
+    end
 
     # Define input parameters
     private def post_params
