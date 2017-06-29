@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  # Setting domain root 
+  # Setting root of site 
   root 'posts#index'
 
-  # Setting url path for about page
+  # Setting regular get route
   get 'about' => 'pages#about'
-
   
+  # Generate all routes for controller. Run 'rake routes' to view routes
+  resources :posts
+
+
 end
